@@ -1,11 +1,6 @@
 import PhotoModalFetcher from "./PhotoModalFetcher";
 
-interface PageProps {
-  params: {
-    href: string; // Match the [href] dynamic route segment
-  };
-}
-
-export default function Page({ params }: PageProps) {
+export default function Page({ params }: {params: {href: string}}) {
+  console.log("Params:", params); // Check what is passed to the Page
   return <PhotoModalFetcher params={params} />;
 }
